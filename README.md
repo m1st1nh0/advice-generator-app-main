@@ -14,8 +14,8 @@ A aplicação consome a **Advice Slip API** para buscar conselhos aleatórios e 
 
 ## 🚀 Demonstração
 
-* **Live Site:** Em construção
-* **Repositório:** Em construção
+* **Live Site:** https://m1st1nh0.github.io/advice-generator-app-main/
+* **Repositório:** https://github.com/m1st1nh0/advice-generator-app-main
 
 ---
 
