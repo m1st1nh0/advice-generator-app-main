@@ -1,0 +1,115 @@
+:root {
+  --blue_primary_200: hsl(193, 38%, 86%);
+  --green_primary_300: hsl(150, 100%, 66%);
+  --green_primary_300_shadow: hsla(150, 100%, 66%, 0.72);
+  --blue_neutral_600: hsl(217, 19%, 38%);
+  --blue_neutral_900: hsl(217, 19%, 24%);
+  --blue_neutral_950: hsl(218, 23%, 16%);
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+}
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  background-color: var(--blue_neutral_950);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: var(--space-8);
+}
+
+#container {
+  position: relative;
+  background-color: var(--blue_neutral_900);
+  border-radius: 15px;
+  padding: clamp(1rem, 5vw, 2rem);
+  width: min(90%, 560px);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title_advice {
+  color: var(--green_primary_300);
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+}
+
+#advice {
+  color: var(--blue_primary_200);
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+#divider {
+  margin-bottom: 2rem;
+}
+
+#next_advice {
+  position: absolute;
+  padding-top: var(--space-1);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: var(--green_primary_300);
+  cursor: pointer;
+}
+
+#btn {
+  width: 64px;
+  height: 64px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--green_primary_300);
+
+  cursor: pointer;
+
+  transition:
+    box-shadow 0.2s ease-in-out,
+    transform 0.2s ease;
+}
+
+#btn:hover {
+  box-shadow: 0 0 25px var(--green_primary_300_shadow);
+}
+
+@media (max-width: 600px) {
+  #container {
+    min-height: 300px;
+  }
+
+  #advice {
+    margin-bottom: 1.5rem;
+  }
+
+  #divider img {
+    width: 100%;
+  }
+}
